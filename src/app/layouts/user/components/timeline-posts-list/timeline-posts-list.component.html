@@ -1,0 +1,39 @@
+<div class="container" fxLayoutAlign="space-around center">
+
+    <div fxLayout="column" fxFlex="50" fxFlex.xs="100" fxFlex.sm="100" >
+        <mat-card *ngFor="let post of posts" class="shadow-sm p-2 mt-5">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{post.username}}</mat-card-title>
+                <mat-card-subtitle>{{post.date}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="subtitle-2">
+                    {{post.content}}
+                </p>
+            </mat-card-content>
+            <img mat-card-image src="{{post.image}}" alt="Photo of a Shiba Inu">
+    
+    
+            <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+                <button mat-button>❤😄 12</button>
+                <button mat-button>4 comments</button>
+            </mat-card-actions>
+    
+            <mat-divider></mat-divider>
+    
+            <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+                <button mat-button>
+                    <mat-icon>favorite_border</mat-icon>
+                    Love
+                </button>
+                <button mat-button>
+                    <mat-icon> chat_bubble_outline</mat-icon>
+                    Comment
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    
+    
+</div>
