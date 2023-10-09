@@ -1,39 +1,78 @@
 <div class="container" fxLayoutAlign="space-around center">
 
-    <div fxLayout="column" fxFlex="50" fxFlex.xs="100" fxFlex.sm="100" >
-        <mat-card *ngFor="let post of posts" class="shadow-sm p-2 mt-5">
+
+    <div fxLayout="column" fxFlex="50" fxFlex.xs="100" fxFlex.sm="100">
+        <mat-card *ngFor="let post of posts" class="shadow-sm p-2 mt-3">
             <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>{{post.username}}</mat-card-title>
-                <mat-card-subtitle>{{post.date}}</mat-card-subtitle>
+                <div fxLayout="row" fxFlex="100" fxLayoutGap="10px">
+                    <img src="{{post.user.profile_image_url}}" class="circle-avatar-md m2" />
+                    <div fxFlex="column">
+                        <mat-card-title>{{post.user.username}}</mat-card-title>
+                        <mat-card-subtitle>{{post.date}}</mat-card-subtitle>
+                    </div>
+                </div>
+
+
             </mat-card-header>
             <mat-card-content>
-                <p class="subtitle-2">
+                <p class="subtitle-2 my-2">
                     {{post.content}}
                 </p>
             </mat-card-content>
-            <img mat-card-image src="{{post.image}}" alt="Photo of a Shiba Inu">
-    
-    
+
+            <img *ngIf="post.images.length===1" mat-card-image src="{{post.images[0].image_url}}"
+                alt="Photo of a Shiba Inu">
+
+            <mat-grid-list *ngIf="post.images.length > 1" cols="{{post.images.length}}" cols="2" rows="2"
+                rowHeight="1:3">
+
+                <mat-grid-tile *ngFor="let img of post.images">
+                    <img loading="lazy" mat-card-image src="{{img.image_url}}" alt="Photo of a Shiba Inu">
+                </mat-grid-tile>
+
+            </mat-grid-list>
+
+
             <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
-                <button mat-button>❤😄 12</button>
-                <button mat-button>4 comments</button>
+                <button mat-button>❤😄 {{post.likesCount}}</button>
+                <button mat-button (click)="openCommentsModal(post.id)">{{post.commentCount}} comments</button>
             </mat-card-actions>
-    
+
             <mat-divider></mat-divider>
-    
-            <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
-                <button mat-button>
-                    <mat-icon>favorite_border</mat-icon>
-                    Love
-                </button>
-                <button mat-button>
-                    <mat-icon> chat_bubble_outline</mat-icon>
-                    Comment
-                </button>
-            </mat-card-actions>
+
+           
+
+          
+
+
+                <mat-expansion-panel fxLayout="column" (opened)="addCommentFormOpen = true" (closed)="addCommentFormOpen = false">
+                  
+                    <mat-expansion-panel-header >
+
+
+                      
+                        
+                        <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+                            <button mat-button>
+                                <mat-icon>favorite_border</mat-icon>
+                                Love
+                            </button>
+                            <button mat-button>
+                                <mat-icon> chat_bubble_outline</mat-icon>
+                                Comment
+                            </button>
+                        </mat-card-actions>
+                    
+                    </mat-expansion-panel-header>
+
+                    
+                    
+                    
+                    <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+           
         </mat-card>
     </div>
-    
-    
+
+
 </div>

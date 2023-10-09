@@ -10,15 +10,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
-import {MatInputModule} from '@angular/material/input';
-import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule} from '@angular/material/form-field';
-import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatInputModule } from '@angular/material/input';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
+import { ProgressSpinnerMode, MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
 
 
-
-const materials:any = [
+const materials: any = [
   MatSidenavModule,
   MatMenuModule,
   MatToolbarModule,
@@ -27,14 +28,16 @@ const materials:any = [
   RouterModule,
   MatExpansionModule,
   MatTooltipModule,
-  MatCardModule, 
+  MatCardModule,
   MatButtonModule,
   FormsModule,
   MatFormFieldModule,
-   MatInputModule,
-   MatTabsModule,
-   MatSliderModule,
-    MatProgressSpinnerModule,
+  MatInputModule,
+  MatTabsModule,
+  MatSliderModule,
+  MatProgressSpinnerModule,
+  MatGridListModule,
+  MatButtonModule, MatDialogModule
 ];
 
 @NgModule({
@@ -42,4 +45,3 @@ const materials:any = [
   exports: [materials]
 })
 export class MaterialModule { }
- 

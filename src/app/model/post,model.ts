@@ -1,16 +1,17 @@
+import { PostComment } from "./post_comment,model";
 import { PostImage } from "./post_image,model";
+import { User } from "./user,model";
 
 export class Post{
     
     constructor(
         public id: number,
-        public userId: number,
-        public username: string,
+        public user: User,
         public date: string,
         public images: PostImage[],
         public content: string,
         public likesCount: number,
         public commentCount: number,
-        public recentComments: Comment []
+        public recentComments: PostComment []
     ){}
 }

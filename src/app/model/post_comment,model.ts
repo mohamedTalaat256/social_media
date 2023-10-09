@@ -1,10 +1,12 @@
 import { User } from "./user,model";
 
-export class Comment{
+export class PostComment{
     
     constructor(
         public postId: number,
         public user: User,
-        public text: string,
+        public content: string,
+        public createdAt: string,
+
     ){}
 }

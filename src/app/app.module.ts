@@ -20,6 +20,7 @@ import { FriendsComponent } from './layouts/user/pages/friends/friends.component
 import { FriendsListComponent } from './layouts/user/components/friends-list/friends-list.component';
 import { AddPostFormComponent } from './layouts/user/components/add-post-form/add-post-form.component';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions } from '@angular/material/form-field';
+import { CommentsModalComponent } from './layouts/user/components/comments-modal/comments-modal.component';
 
 
 const appearance: MatFormFieldDefaultOptions = {
@@ -38,7 +39,8 @@ const appearance: MatFormFieldDefaultOptions = {
     TimelinePostsListComponent,
     FriendsComponent,
     FriendsListComponent,
-    AddPostFormComponent
+    AddPostFormComponent,
+    CommentsModalComponent
   ],
   imports: [
     MatSidenavModule,

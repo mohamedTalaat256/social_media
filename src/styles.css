@@ -52,5 +52,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: h
     width: 40px;
     border-radius: 50%;
 }
+.circle-avatar-md {
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
 
 /* margin */
