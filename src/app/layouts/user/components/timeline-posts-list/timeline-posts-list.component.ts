@@ -17,6 +17,11 @@ export class TimelinePostsListComponent {
   addCommentFormOpen: boolean = false;
 
 
+    genRandom(){
+      return Math.floor(Math.random() * (3 - 1 + 1)) + 1; 
+    }
+
+
 
   openCommentsModal(postId: number) {
     this.dialog.open(CommentsModalComponent,
