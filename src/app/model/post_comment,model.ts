@@ -5,7 +5,7 @@ export class PostComment{
     constructor(
         public postId: number,
         public user: User,
-        public content: string,
+        public comment: string,
         public createdAt: string,
 
     ){}

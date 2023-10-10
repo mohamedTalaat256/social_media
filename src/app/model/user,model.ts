@@ -7,4 +7,11 @@ export class User{
         public about: string,
         public profile_image_url: string
     ){}
+
+
+    
+    constructor(
+        public id: number,
+        public username: string,
+        public about: string    ){}
 }

@@ -9,7 +9,7 @@ export class Post{
         public user: User,
         public date: string,
         public images: PostImage[],
-        public content: string,
+        public caption: string,
         public likesCount: number,
         public commentCount: number,
         public recentComments: PostComment []
