@@ -21,11 +21,17 @@ import { FriendsListComponent } from './layouts/user/components/friends-list/fri
 import { AddPostFormComponent } from './layouts/user/components/add-post-form/add-post-form.component';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions } from '@angular/material/form-field';
 import { CommentsModalComponent } from './layouts/user/components/comments-modal/comments-modal.component';
-
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
 };
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -50,7 +56,15 @@ const appearance: MatFormFieldDefaultOptions = {
     BrowserAnimationsModule,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [
     {
