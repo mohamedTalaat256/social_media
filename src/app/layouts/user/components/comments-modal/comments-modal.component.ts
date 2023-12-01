@@ -6,7 +6,7 @@ import { postCommentsDummyList } from 'src/app/data/comments';
 @Component({
   selector: 'app-comments-modal',
   templateUrl: './comments-modal.component.html',
-  styleUrls: ['./comments-modal.component.css']
+  styleUrls: ['./comments-modal.component.scss']
 })
 export class CommentsModalComponent {
 

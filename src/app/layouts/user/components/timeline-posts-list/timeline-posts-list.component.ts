@@ -7,7 +7,7 @@ import { CommentsModalComponent } from '../comments-modal/comments-modal.compone
 @Component({
   selector: 'app-timeline-posts-list',
   templateUrl: './timeline-posts-list.component.html',
-  styleUrls: ['./timeline-posts-list.component.css']
+  styleUrls: ['./timeline-posts-list.component.scss']
 })
 export class TimelinePostsListComponent {
   constructor(public dialog: MatDialog) { }

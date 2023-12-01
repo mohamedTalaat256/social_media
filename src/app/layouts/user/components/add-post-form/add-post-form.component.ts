@@ -5,7 +5,7 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 @Component({
   selector: 'add-post-form',
   templateUrl: './add-post-form.component.html',
-  styleUrls: ['./add-post-form.component.css']
+  styleUrls: ['./add-post-form.component.scss']
 })
 export class AddPostFormComponent {
   

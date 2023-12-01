@@ -2,7 +2,7 @@
 
 
     <div fxLayout="column" fxFlex="50" fxFlex.xs="100" fxFlex.sm="100">
-        <mat-card *ngFor="let post of posts" class="shadow-sm p-2 mt-3">
+        <mat-card *ngFor="let post of posts" class="p-2 mt-3 elevation-2">
             <mat-card-header>
                 <div fxLayout="row" fxFlex="100" fxLayoutGap="10px">
                     <img src="{{post.user.profile_image_url}}" class="circle-avatar-md m2" />
@@ -23,12 +23,12 @@
             </mat-card-content>
 
             <img *ngIf="post.images.length===1" mat-card-image src="{{post.images[0].image_url}}"
-                alt="Photo of a Shiba Inu">
+              class="post-img"  alt="Photo of a Shiba Inu">
 
             <mat-grid-list *ngIf="post.images.length === 2" cols="{{post.images.length}}" cols="2" rowHeight="2:2">
 
                 <mat-grid-tile *ngFor="let img of post.images">
-                    <img loading="lazy" mat-card-image src="{{img.image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{img.image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
 
             </mat-grid-list>
@@ -37,13 +37,13 @@
             <mat-grid-list *ngIf="post.images.length === 3" cols="{{post.images.length}}" >
 
                 <mat-grid-tile [colspan]="2" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[0].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[0].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[1].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[1].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="3" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[2].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[2].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
 
             </mat-grid-list>
@@ -52,17 +52,17 @@
             <mat-grid-list *ngIf="post.images.length === 4" cols="{{post.images.length}}" >
 
                 <mat-grid-tile   [colspan]="2" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[0].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[0].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="2" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[1].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[1].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="2" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[2].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[2].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
 
                  <mat-grid-tile [colspan]="2" [rowspan]="1">
-                    <img loading="lazy" mat-card-image src="{{post.images[2].image_url}}" alt="Photo of a Shiba Inu">
+                    <img loading="lazy" mat-card-image src="{{post.images[2].image_url}}" class="post-img" alt="Photo of a Shiba Inu">
                 </mat-grid-tile>
 
             </mat-grid-list>

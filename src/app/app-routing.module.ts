@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/user/timeline', pathMatch: 'full' },
+  { path: 'admin', redirectTo: '/admin/dashboard', pathMatch: 'full' },
 
 ];
 

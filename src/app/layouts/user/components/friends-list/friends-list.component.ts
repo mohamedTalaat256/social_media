@@ -4,7 +4,7 @@ import { User } from 'src/app/model/user,model';
 @Component({
   selector: 'app-friends-list',
   templateUrl: './friends-list.component.html',
-  styleUrls: ['./friends-list.component.css']
+  styleUrls: ['./friends-list.component.scss']
 })
 export class FriendsListComponent {
   

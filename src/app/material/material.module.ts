@@ -17,7 +17,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 const materials: any = [
   MatSidenavModule,
@@ -37,7 +40,11 @@ const materials: any = [
   MatSliderModule,
   MatProgressSpinnerModule,
   MatGridListModule,
-  MatButtonModule, MatDialogModule
+  MatButtonModule, MatDialogModule,
+  MatTableModule,
+  MatStepperModule,
+  MatSelectModule,
+  MatCheckboxModule
 ];
 
 @NgModule({

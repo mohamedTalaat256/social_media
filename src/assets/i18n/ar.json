@@ -1,3 +1,10 @@
 {
+    "email" : "البريد اللإلكتروني",
+    "first_name" : "الاسم الأول",
+    "last_name" : "الاسم الأخير",
+    "username": "اسم المستخدم",
+    "password": "كلمة السر",
+    
+    "register": "تسجيل",
     "notifications": "الإشعارات"
 }

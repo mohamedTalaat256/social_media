@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppSideNavbarComponent } from './global/app-side-navbar/app-side-navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MaterialModule } from './material/material.module';
 import { AppToolbarListComponent } from './global/app-side-navbar/components/app-toolbar-list/app-toolbar-list.component';
@@ -24,6 +24,18 @@ import { CommentsModalComponent } from './layouts/user/components/comments-modal
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { AuthComponent } from './layouts/auth/auth.component'; 
+import { AuthRoutingModule } from './layouts/auth/auth-routing.module';
+import { TableComponent } from './layouts/user/pages/table/table.component';
+import { ComponentsComponent } from './layouts/user/pages/components/components.component';
+import { DashboardComponent } from './layouts/admin/components/dashboard/dashboard.component';
+import { AdminRoutingModule } from './layouts/admin/admin-routing.module';
+import { AdminComponent } from './layouts/admin/admin.component';
+import { AdminToolbarListComponent } from './layouts/admin/global/admin-toolbar-list/admin-toolbar-list.component';
+import { AdminSideNavListComponent } from './layouts/admin/global/admin-side-nav-list/admin-side-nav-list.component';
+import { MyCommunityComponent } from './layouts/admin/components/my-community/my-community.component';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { AddCourseComponent } from './layouts/admin/components/add-course/add-course.component';
 
 const appearance: MatFormFieldDefaultOptions = {
   appearance: 'outline'
@@ -38,26 +50,41 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     AppComponent,
     AppSideNavbarComponent,
     AppToolbarListComponent,
+    AdminToolbarListComponent,
     AppSidenavListComponent,
     UserComponent,
+    AdminComponent,
     TimeLineComponent,
     ProfileComponent,
     TimelinePostsListComponent,
     FriendsComponent,
     FriendsListComponent,
     AddPostFormComponent,
-    CommentsModalComponent
+    CommentsModalComponent,
+    AuthComponent,  
+    TableComponent,
+    ComponentsComponent,
+    DashboardComponent,
+    DashboardComponent,
+    AdminSideNavListComponent,
+    MyCommunityComponent,
+    AddCourseComponent
   ],
   imports: [
     MatSidenavModule,
     BrowserModule,
     AppRoutingModule,
     UserRoutingModule,
+    AuthRoutingModule,
+    AdminRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MaterialModule,
     HttpClientModule,
+    NgApexchartsModule,
+
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

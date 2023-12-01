@@ -28,7 +28,7 @@
         </button>
 
 
-        <button mat-icon-button color="primary" matTooltip="Like" fxHide.xs>
+        <button mat-icon-button color="danger" matTooltip="Like" fxHide.xs>
             <mat-icon>favorite</mat-icon>
         </button>
 
@@ -42,18 +42,18 @@
         </button>
 
         <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
-            <button mat-menu-item routerLink="#">
-                <mat-icon>person</mat-icon><span>My Account</span>
+            <button mat-menu-item routerLink="#" >
+                <mat-icon color="primary">person</mat-icon><span>My Account</span>
             </button>
             <button mat-menu-item routerLink="#">
-                <mat-icon>settings</mat-icon><span>Settings</span>
+                <mat-icon color="accent">settings</mat-icon><span>Settings</span>
             </button>
             <button mat-menu-item routerLink="#">
-                <mat-icon>help</mat-icon><span>Help</span>
+                <mat-icon color="warn">help</mat-icon><span>Help</span>
             </button>
             <mat-divider></mat-divider>
             <button mat-menu-item routerLink="#">
-                <mat-icon>exit_to_app</mat-icon>Logout
+                <mat-icon color="danger">exit_to_app</mat-icon>Logout
             </button>
 
 
